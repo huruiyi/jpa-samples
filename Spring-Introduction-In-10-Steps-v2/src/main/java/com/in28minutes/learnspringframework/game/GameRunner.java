@@ -10,8 +10,14 @@ public class GameRunner {
     private GamingConsole game;
 
     public GameRunner(GamingConsole game) {
+        System.out.println("Using Constructor");
         this.game = game;
     }
+
+//	public void setGame(GamingConsole game) {
+//		System.out.println("Using Setter");
+//		this.game = game;
+//	}
 
     public void run() {
         game.up();

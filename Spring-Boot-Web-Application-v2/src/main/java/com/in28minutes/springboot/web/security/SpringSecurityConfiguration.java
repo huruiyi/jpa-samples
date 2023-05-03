@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.myfirstwebapp.security;
+package com.in28minutes.springboot.web.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

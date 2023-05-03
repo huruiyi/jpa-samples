@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.myfirstwebapp.todo;
+package com.in28minutes.springboot.web.todo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

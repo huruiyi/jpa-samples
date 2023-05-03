@@ -1,35 +1,30 @@
 package com.in28minutes.learnspringframework;
 
-import com.in28minutes.learnspringframework.enterprise.flow.web.MyWebController;
+import com.in28minutes.learnspringframework.enterprise.flow.web.WebController;
 import com.in28minutes.learnspringframework.game.GameRunner;
+import com.in28minutes.learnspringframework.game.GamingConsole;
+import com.in28minutes.learnspringframework.game.MarioGame;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-//@ComponentScan("com.in28minutes.spring.learnspringframework")
-//@ComponentScan({"com.package1", "com.package2"})
 public class LearnSpringFrameworkApplication {
 
     public static void main(String[] args) {
 
+        GamingConsole game2 = new MarioGame();
+        GameRunner runner2 = new GameRunner(game2);
+        runner2.run();
 
-        //MarioGame game = new MarioGame();
-        //SuperContraGame game = new SuperContraGame();
-
-        //GamingConsole game = new MarioGame(); //1
-        //GameRunner runner = new GameRunner(game); //2
-
-        ConfigurableApplicationContext context
-                = SpringApplication.run(LearnSpringFrameworkApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(LearnSpringFrameworkApplication.class, args);
 
         GameRunner runner = context.getBean(GameRunner.class);
         runner.run();
 
-        MyWebController controller = context.getBean(MyWebController.class);
-        System.out.println(controller.returnValueFromBusinessService());
-
-
+        WebController controller = context.getBean(WebController.class);
+        long num = controller.returnValueFromBusinessService();
+        System.out.println(num);
     }
 
 }
