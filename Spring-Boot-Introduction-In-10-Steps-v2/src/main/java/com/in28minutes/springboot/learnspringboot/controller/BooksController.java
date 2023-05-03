@@ -10,7 +10,6 @@ import java.util.List;
 public class BooksController {
     @GetMapping("/books")
     public List<Book> getAllBooks() {
-        return List.of(
-				new Book(1L, "Mastering Spring 5.2", "Ranga Karanam"));
+        return List.of(new Book(1L, "Mastering Spring 5.2", "Ranga Karanam"));
     }
 }
