@@ -9,14 +9,14 @@ import org.springframework.context.annotation.Profile;
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
-		ApplicationContext ctx = SpringApplication.run(Application.class, args);
+    public static void main(String[] args) {
+        ApplicationContext ctx = SpringApplication.run(Application.class, args);
 
-	}
+    }
 
-	@Profile("prod")
-	@Bean
-	public String dummy() {
-		return "something";
-	}
+    @Profile("prod")
+    @Bean
+    public String dummy() {
+        return "something";
+    }
 }

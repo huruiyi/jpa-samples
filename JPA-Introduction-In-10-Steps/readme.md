@@ -1,4 +1,4 @@
-##  First 10 Steps in JPA with H2 in-memory database
+## First 10 Steps in JPA with H2 in-memory database
 
 - Step 1 : Object Relational Impedence Mismatch - Understanding the problem that JPA solves
 - Step 2 : World before JPA - JDBC, Spring JDBC and myBatis
@@ -13,10 +13,11 @@
 - Next Steps
 
 Notes
+
 - http://localhost:8080/h2-console
 - Use db url jdbc:h2:mem:testdb
-## Complete Code Example
 
+## Complete Code Example
 
 ### /notes.txt
 
@@ -54,6 +55,7 @@ JpaBaseConfiguration#entityManagerFactory matched:
 JpaBaseConfiguration#transactionManager matched:
  - @ConditionalOnMissingBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
 ```
+
 ---
 
 ### /pom.xml
@@ -98,8 +100,8 @@ JpaBaseConfiguration#transactionManager matched:
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -160,6 +162,7 @@ JpaBaseConfiguration#transactionManager matched:
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/entity/User.java
@@ -211,6 +214,7 @@ public class User {
 	}
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/JpaIn10StepsApplication.java
@@ -229,6 +233,7 @@ public class JpaIn10StepsApplication {
 	}
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/service/UserDAOService.java
@@ -264,6 +269,7 @@ public class UserDAOService {
  * 
  */
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/service/UserRepository.java
@@ -279,6 +285,7 @@ public interface UserRepository extends JpaRepository<User, Long>{
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/UserDaoServiceCommandLineRunner.java
@@ -313,6 +320,7 @@ public class UserDaoServiceCommandLineRunner implements CommandLineRunner{
 	}
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/UserRepositoryCommandLineRunner.java
@@ -356,6 +364,7 @@ public class UserRepositoryCommandLineRunner implements CommandLineRunner{
 	
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties
@@ -365,6 +374,7 @@ spring.jpa.show-sql=true
 spring.h2.console.enabled=true
 logging.level.org.springframework=debug
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/learning/jpa/jpain10steps/JpaIn10StepsApplicationTests.java
@@ -387,6 +397,7 @@ public class JpaIn10StepsApplicationTests {
 
 }
 ```
+
 ---
 
 ### /step-completed.sh
@@ -396,6 +407,7 @@ java -cp /ProgrammingExcellence/Workspaces/Rithus.com/ListDirectoryContentInGitF
 zip -r $1.zip . -x "target/*" -x ".*/*" -x ".*" -x "*.md" -x "mvn*" -x "*.zip"
 git add *; git commit -m "$1"; git push;
 ```
+
 ---
 
 ### /take-step-backup.sh
@@ -404,4 +416,5 @@ git add *; git commit -m "$1"; git push;
 java -cp /ProgrammingExcellence/Workspaces/Rithus.com/ListDirectoryContentInGitFormat/bin test.ListDirectoryContentInGitFormat $PWD >> $1.md
 zip -r $1.zip . -x "target/*" -x ".*/*" -x ".*" -x "*.md" -x "mvn*" -x "*.zip"
 ```
+
 ---

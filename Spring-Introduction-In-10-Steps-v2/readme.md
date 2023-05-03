@@ -23,7 +23,6 @@ Current Directory : /Users/ranga/Ranga/git/00.courses/getting-started-for-beginn
 
 ## Complete Code Example
 
-
 ### /notes.txt
 
 ```
@@ -56,6 +55,7 @@ Action:
 Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
 
 ```
+
 ---
 
 ### /pom.xml
@@ -125,6 +125,7 @@ Consider marking one of the beans as @Primary, updating the consumer to accept m
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/LearnSpringFrameworkApplication.java
@@ -167,6 +168,7 @@ public class LearnSpringFrameworkApplication {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/enterprise/example/business/BusinessService.java
@@ -200,6 +202,7 @@ public class BusinessService {
     }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/enterprise/example/data/DataService.java
@@ -219,6 +222,7 @@ public class DataService {
 	}
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/enterprise/example/web/MyWebController.java
@@ -243,6 +247,7 @@ public class MyWebController {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/game/GameRunner.java
@@ -273,6 +278,7 @@ public class GameRunner {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/game/GamingConsole.java
@@ -287,6 +293,7 @@ public interface GamingConsole {
 	void right();
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/game/MarioGame.java
@@ -319,6 +326,7 @@ public class MarioGame implements GamingConsole {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/game/PacmanGame.java
@@ -351,6 +359,7 @@ public class PacmanGame implements GamingConsole {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/spring/learnspringframework/game/SuperContraGame.java
@@ -385,6 +394,7 @@ public class SuperContraGame implements GamingConsole {
 
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties
@@ -392,6 +402,7 @@ public class SuperContraGame implements GamingConsole {
 ```properties
 logging.level.org.springframework=debug
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/spring/learnspringframework/LearnSpringFrameworkApplicationTests.java
@@ -411,4 +422,5 @@ class LearnSpringFrameworkApplicationTests {
 
 }
 ```
+
 ---

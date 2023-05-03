@@ -1,33 +1,33 @@
 package com.in28minutes.springboot.web.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Size;
-
 import java.util.Date;
-
 
 
 @Entity
 public class Todo {
-    
-	@Id
-	@GeneratedValue
-	private int id;
-    
-	private String user;
-    
-    @Size(min=10, message="Enter at least 10 Characters...")
+
+    @Id
+    @GeneratedValue
+    private int id;
+
+    private String user;
+
+    @Size(min = 10, message = "Enter at least 10 Characters...")
     private String desc;
 
     private Date targetDate;
     private boolean isDone;
 
     public Todo() {
-    		super();
+        super();
     }
-    
+
     public Todo(int id, String user, String desc, Date targetDate,
-            boolean isDone) {
+                boolean isDone) {
         super();
         this.id = id;
         this.user = user;

@@ -21,7 +21,6 @@ Current Directory : /Users/ranga/Ranga/git/00.courses/getting-started-for-beginn
 
 ## Complete Code Example
 
-
 ### /notes.txt
 
 ```
@@ -43,6 +42,7 @@ error
 
 off
 ```
+
 ---
 
 ### /pom.xml
@@ -124,6 +124,7 @@ off
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/learnspringboot/Course.java
@@ -162,6 +163,7 @@ public class Course {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/learnspringboot/CourseController.java
@@ -192,6 +194,7 @@ public class CourseController {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/learnspringboot/CurrencyConfigurationController.java
@@ -217,6 +220,7 @@ public class CurrencyConfigurationController {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/learnspringboot/CurrencyServiceConfiguration.java
@@ -265,6 +269,7 @@ public class CurrencyServiceConfiguration {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/learnspringboot/LearnSpringBootApplication.java
@@ -284,6 +289,7 @@ public class LearnSpringBootApplication {
 
 }
 ```
+
 ---
 
 ### /src/main/resources/application-dev.properties
@@ -295,6 +301,7 @@ currency-service.url=http://dev.in28minutes.com
 currency-service.username=devusername
 currency-service.key=devkey
 ```
+
 ---
 
 ### /src/main/resources/application-prod.properties
@@ -302,6 +309,7 @@ currency-service.key=devkey
 ```properties
 logging.level.org.springframework=info
 ```
+
 ---
 
 ### /src/main/resources/application.properties
@@ -317,6 +325,7 @@ currency-service.key=defaultkey
 
 management.endpoints.web.exposure.include=health,metrics
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/springboot/learnspringboot/LearnSpringBootApplicationTests.java
@@ -336,4 +345,5 @@ class LearnSpringBootApplicationTests {
 
 }
 ```
+
 ---

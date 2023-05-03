@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class WelcomeService {
 
-	@Value("${welcome.message}")
-	private String welcomeMessage;
+    @Value("${welcome.message}")
+    private String welcomeMessage;
 
-	public String retrieveWelcomeMessage() {
-		//Complex Method
-		return welcomeMessage;
-	}
+    public String retrieveWelcomeMessage() {
+        //Complex Method
+        return welcomeMessage;
+    }
 }

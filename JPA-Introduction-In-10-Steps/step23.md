@@ -1,6 +1,4 @@
-
 ## Complete Code Example
-
 
 ### /notes.txt
 
@@ -38,6 +36,7 @@ JpaBaseConfiguration#entityManagerFactory matched:
 JpaBaseConfiguration#transactionManager matched:
  - @ConditionalOnMissingBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
 ```
+
 ---
 
 ### /pom.xml
@@ -45,105 +44,106 @@ JpaBaseConfiguration#transactionManager matched:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.in28minutes.learning.jpa</groupId>
-	<artifactId>jpa-in-10-steps</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.in28minutes.learning.jpa</groupId>
+    <artifactId>jpa-in-10-steps</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>jpa-in-10-steps</name>
-	<description>Demo project for Spring Boot</description>
+    <name>jpa-in-10-steps</name>
+    <description>Demo project for Spring Boot</description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.0.RELEASE</version>
-		<relativePath /> 
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.RELEASE</version>
+        <relativePath/>
+    </parent>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<dependencies>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <dependencies>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 
-	<repositories>
-		<repository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
-			<url>https://repo.spring.io/snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
-			<url>https://repo.spring.io/snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/entity/User.java
@@ -159,42 +159,43 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-	@Id
-	@GeneratedValue
-	private long id;
+    @Id
+    @GeneratedValue
+    private long id;
 
-	private String name;
+    private String name;
 
-	private String role;
+    private String role;
 
-	protected User() {
+    protected User() {
 
-	}
+    }
 
-	public User(String name, String role) {
-		super();
-		this.name = name;
-		this.role = role;
-	}
+    public User(String name, String role) {
+        super();
+        this.name = name;
+        this.role = role;
+    }
 
-	public long getId() {
-		return id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getRole() {
-		return role;
-	}
+    public String getRole() {
+        return role;
+    }
 
-	@Override
-	public String toString() {
-		return String.format("User [id=%s, name=%s, role=%s]", id, name, role);
-	}
+    @Override
+    public String toString() {
+        return String.format("User [id=%s, name=%s, role=%s]", id, name, role);
+    }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/JpaIn10StepsApplication.java
@@ -208,11 +209,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class JpaIn10StepsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(JpaIn10StepsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(JpaIn10StepsApplication.class, args);
+    }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/service/UserDAOService.java
@@ -231,23 +233,24 @@ import com.in28minutes.learning.jpa.jpain10steps.entity.User;
 @Repository
 @Transactional
 public class UserDAOService {
-		
-	@PersistenceContext
-	private EntityManager entityManager;
-	
-	public long insert(User user){
-		entityManager.persist(user);
-		return user.getId();
-	}
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    public long insert(User user) {
+        entityManager.persist(user);
+        return user.getId();
+    }
 }
 
 /*
  * Spring Data JPA
- * 
- * 
- * 
+ *
+ *
+ *
  */
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/service/UserRepository.java
@@ -259,10 +262,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.in28minutes.learning.jpa.jpain10steps.entity.User;
 
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface UserRepository extends JpaRepository<User, Long> {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/UserDaoServiceCommandLineRunner.java
@@ -280,23 +284,24 @@ import com.in28minutes.learning.jpa.jpain10steps.entity.User;
 import com.in28minutes.learning.jpa.jpain10steps.service.UserDAOService;
 
 @Component
-public class UserDaoServiceCommandLineRunner implements CommandLineRunner{
+public class UserDaoServiceCommandLineRunner implements CommandLineRunner {
 
-	private static final Logger log = 
-			LoggerFactory.getLogger(UserDaoServiceCommandLineRunner.class);
-	
-	@Autowired
-	private UserDAOService userDaoService;
-	
-	@Override
-	public void run(String... arg0) throws Exception {
-		User user = new User("Jack", "Admin");
-		//New User is created : User [id=1, name=Jack, role=Admin]
-		long insert = userDaoService.insert(user);
-		log.info("New User is created : " + user);
-	}
+    private static final Logger log =
+            LoggerFactory.getLogger(UserDaoServiceCommandLineRunner.class);
+
+    @Autowired
+    private UserDAOService userDaoService;
+
+    @Override
+    public void run(String... arg0) throws Exception {
+        User user = new User("Jack", "Admin");
+        //New User is created : User [id=1, name=Jack, role=Admin]
+        long insert = userDaoService.insert(user);
+        log.info("New User is created : " + user);
+    }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/learning/jpa/jpain10steps/UserRepositoryCommandLineRunner.java
@@ -317,29 +322,30 @@ import com.in28minutes.learning.jpa.jpain10steps.entity.User;
 import com.in28minutes.learning.jpa.jpain10steps.service.UserRepository;
 
 @Component
-public class UserRepositoryCommandLineRunner implements CommandLineRunner{
+public class UserRepositoryCommandLineRunner implements CommandLineRunner {
 
-	private static final Logger log = 
-			LoggerFactory.getLogger(UserRepositoryCommandLineRunner.class);
-	
-	@Autowired
-	private UserRepository userRepository;
-	
-	@Override
-	public void run(String... arg0) throws Exception {
-		User user = new User("Jill", "Admin");
-		userRepository.save(user);
-		log.info("New User is created : " + user);
-		
-		Optional<User> userWithIdOne = userRepository.findById(1L);
-		log.info("User is retrived : " + userWithIdOne);
+    private static final Logger log =
+            LoggerFactory.getLogger(UserRepositoryCommandLineRunner.class);
 
-		List<User> users = userRepository.findAll();
-		log.info("All Users : " + users);			
-	}
-	
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public void run(String... arg0) throws Exception {
+        User user = new User("Jill", "Admin");
+        userRepository.save(user);
+        log.info("New User is created : " + user);
+
+        Optional<User> userWithIdOne = userRepository.findById(1L);
+        log.info("User is retrived : " + userWithIdOne);
+
+        List<User> users = userRepository.findAll();
+        log.info("All Users : " + users);
+    }
+
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties
@@ -349,6 +355,7 @@ spring.jpa.show-sql=true
 spring.h2.console.enabled=true
 logging.level.org.springframework=debug
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/learning/jpa/jpain10steps/JpaIn10StepsApplicationTests.java
@@ -365,12 +372,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class JpaIn10StepsApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
 ```
+
 ---
 
 ### /step-completed.sh
@@ -380,4 +388,5 @@ java -cp /ProgrammingExcellence/Workspaces/Rithus.com/ListDirectoryContentInGitF
 zip -r $1.zip . -x "target/*" -x ".*/*" -x ".*" -x "*.md" -x "mvn*" -x "*.zip"
 git add *; git commit -m "$1"; git push;
 ```
+
 ---

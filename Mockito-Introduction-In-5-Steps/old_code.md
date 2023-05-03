@@ -3,33 +3,34 @@
 Mockito is the most famous mocking framework in Java.
 
 ## Changes
+
 ```
 @ExtendWith(MockitoExtension.class)
 ```
 
 - Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
-- Pre-requisites 
+- Pre-requisites
     - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
     - JUnit - https://courses.in28minutes.com/p/junit-tutorial-for-beginners
 - Easier Static Imports
-  - Window > Preferences > Java > Editor > Content Assist > Favorites
-    - org.junit.Assert
-    - org.mockito.BDDMockito
-    - org.mockito.Mockito
-    - org.hamcrest.Matchers
-    - org.hamcrest.CoreMatchers
-- More information 
-   - Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
+    - Window > Preferences > Java > Editor > Content Assist > Favorites
+        - org.junit.Assert
+        - org.mockito.BDDMockito
+        - org.mockito.Mockito
+        - org.hamcrest.Matchers
+        - org.hamcrest.CoreMatchers
+- More information
+    - Visit Mockito Official
+      Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
 
 - Step 1 : Setting up an example using http://start.spring.io.
 - Step 2 : Using a Stubs - Disadvantages
-- Step 3 : Your first mock. 
+- Step 3 : Your first mock.
 - Step 4 : Using Mockito Annotations - @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)
 - Step 5 : Mocking List interface
 - Next Steps
 
 ## Complete Code Example
-
 
 ### /pom.xml
 
@@ -123,6 +124,7 @@ Mockito is the most famous mocking framework in Java.
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/DataService.java
@@ -134,6 +136,7 @@ public interface DataService {
 	int[] retrieveAllData();
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/MockitoDemoApplication.java
@@ -152,6 +155,7 @@ public class MockitoDemoApplication {
 	}
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/SomeBusinessImpl.java
@@ -180,12 +184,14 @@ public class SomeBusinessImpl {
 	}
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties
 
 ```properties
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/ListTest.java
@@ -238,6 +244,7 @@ public class ListTest {
 	}
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/MockitoDemoApplicationTests.java
@@ -260,6 +267,7 @@ public class MockitoDemoApplicationTests {
 
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/SomeBusinessMockAnnotationsTest.java
@@ -304,6 +312,7 @@ public class SomeBusinessMockAnnotationsTest {
 	}
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/SomeBusinessMockTest.java
@@ -339,6 +348,7 @@ public class SomeBusinessMockTest {
 
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/SomeBusinessStubTest.java
@@ -368,4 +378,5 @@ class DataServiceStub implements DataService {
 	}
 }
 ```
+
 ---

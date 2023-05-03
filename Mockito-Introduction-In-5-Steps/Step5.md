@@ -4,7 +4,6 @@ Current Directory : /Users/rangakaranam/Ranga/git/00.courses/spring-boot-master-
 
 ## Complete Code Example
 
-
 ### /pom.xml
 
 ```xml
@@ -70,6 +69,7 @@ Current Directory : /Users/rangakaranam/Ranga/git/00.courses/spring-boot-master-
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/MockitoDemoApplication.java
@@ -89,6 +89,7 @@ public class MockitoDemoApplication {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/business/SomeBusinessImpl.java
@@ -123,6 +124,7 @@ interface DataService {
 	
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties
@@ -130,6 +132,7 @@ interface DataService {
 ```properties
 
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/MockitoDemoApplicationTests.java
@@ -149,6 +152,7 @@ class MockitoDemoApplicationTests {
 
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/business/SomeBusinessImplMockTest.java
@@ -194,6 +198,7 @@ class SomeBusinessImplMockTest {
 
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/business/SomeBusinessImplStubTest.java
@@ -244,6 +249,7 @@ class DataServiceStub2 implements DataService {
 	
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/list/ListTest.java
@@ -304,4 +310,5 @@ public class ListTest {
 
 }
 ```
+
 ---

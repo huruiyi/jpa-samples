@@ -87,7 +87,7 @@ surveys.add(survey);
 
 ```
 
-#### DELETE 
+#### DELETE
 
 - http://localhost:8080/surveys/Survey1/questions/Question1
 
@@ -97,6 +97,7 @@ surveys.add(survey);
 **Header**: Content-Type:application/json
 
 **Request Body**
+
 ```
 {
     "description": "Your Favorite Cloud Platform",
@@ -114,6 +115,7 @@ surveys.add(survey);
 **URL**: http://localhost:8080/userDetailses
 **Header**: Content-Type:application/json
 **Request Body**
+
 ```
 {
 "name": "Sathish",
@@ -121,12 +123,12 @@ surveys.add(survey);
 }
 ```
 
-
 ##### PUT
 
 **URL**: http://localhost:8080/surveys/Survey1/questions/Question1
 **Header**: Content-Type:application/json
 **Request Body**
+
 ```
 {
     "id": "Question1",
@@ -141,8 +143,6 @@ surveys.add(survey);
 }
 
 ```
-
-
 
 ## Step By Step Details
 

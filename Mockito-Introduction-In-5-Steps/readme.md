@@ -26,17 +26,20 @@ Mockito is the most famous mocking framework in Java.
 - Others - https://www.youtube.com/watch?v=XveQ9Gq41UM
 
 #### Troubleshooting
+
 - Configuring Java in Eclipse - https://www.youtube.com/watch?v=8i0r_fcE3L0
 
 ## Easier Static Imports
+
 - Window > Preferences > Java > Editor > Content Assist > Favorites
 - org.junit.Assert
 - org.mockito.BDDMockito
 - org.mockito.Mockito
 - org.hamcrest.Matchers
 - org.hamcrest.CoreMatchers
-- More information 
-- Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
+- More information
+- Visit Mockito Official
+  Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
 
 ## Step by Step Details
 
@@ -46,12 +49,12 @@ Mockito is the most famous mocking framework in Java.
 - Step 03 - Writing your first Mockito test with Mocks
 - Step 04 - Simplifying Tests with Mockito Annotations - @Mock, @InjectMocks
 - Step 05 - Exploring Mocks further by Mocking List interface
+
 <!---
 Current Directory : /Users/rangakaranam/Ranga/git/00.courses/spring-boot-master-class/04.Mockito-Introduction-In-5-Steps-V2
 -->
 
 ## Complete Code Example
-
 
 ### /pom.xml
 
@@ -118,6 +121,7 @@ Current Directory : /Users/rangakaranam/Ranga/git/00.courses/spring-boot-master-
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/MockitoDemoApplication.java
@@ -137,6 +141,7 @@ public class MockitoDemoApplication {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/mockito/mockitodemo/business/SomeBusinessImpl.java
@@ -171,6 +176,7 @@ interface DataService {
 	
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties
@@ -178,6 +184,7 @@ interface DataService {
 ```properties
 
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/MockitoDemoApplicationTests.java
@@ -197,6 +204,7 @@ class MockitoDemoApplicationTests {
 
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/business/SomeBusinessImplMockTest.java
@@ -242,6 +250,7 @@ class SomeBusinessImplMockTest {
 
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/business/SomeBusinessImplStubTest.java
@@ -292,6 +301,7 @@ class DataServiceStub2 implements DataService {
 	
 }
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/mockito/mockitodemo/list/ListTest.java
@@ -352,4 +362,5 @@ public class ListTest {
 
 }
 ```
+
 ---

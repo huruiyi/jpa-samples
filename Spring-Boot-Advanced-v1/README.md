@@ -1,4 +1,4 @@
-# Spring Boot Advanced 
+# Spring Boot Advanced
 
 You will be using Spring Boot and get introduced to REST Services.
 
@@ -16,6 +16,7 @@ You will learn about
 - Spring Boot Developer Tools and LiveReload
 
 ### Step List
+
 - Step 01: Setup and Launch Spring Boot Application with Maven and Eclipse
 - Step 02: Creating your first RestController
 - Step 03: Understanding Spring Boot Magic : Spring Boot Starter Web
@@ -25,7 +26,7 @@ You will learn about
 - Step 07: What is REST? Creating REST Service with @GetMapping and @PathVariable
 - Step 08: Second REST Service to retrieve a specific question
 - Step 09: Spring Boot Developer Tools and LiveReload : Develop faster!
-- Step 10: Create a REST Service to add a new question to survey : @PostMapping, Postman 
+- Step 10: Create a REST Service to add a new question to survey : @PostMapping, Postman
 - Step 11: Understand Content Negotiation. Deliver XML Responses from the REST Services
 - Step 12: Spring Initializr : Create Spring Boot Projects on the fly!
 - Step 13: Spring Boot Actuator : Monitor your Spring Boot applications!
@@ -48,6 +49,7 @@ You will learn about
 ## Complete Code Example
 
 ### pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -87,8 +89,8 @@ You will learn about
     </dependency>
 
     <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
     </dependency>
 
     <dependency>
@@ -124,7 +126,9 @@ You will learn about
   </build>
 </project>
 ```
+
 ### src/main/java/com/in28minutes/springboot/Application.java
+
 ```
 package com.in28minutes.springboot;
 
@@ -149,7 +153,9 @@ public class Application {
   }
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/configuration/BasicConfiguration.java
+
 ```
 package com.in28minutes.springboot.configuration;
 
@@ -188,7 +194,9 @@ public class BasicConfiguration {
   }
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/controller/SurveyController.java
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -247,7 +255,9 @@ class SurveyController {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/jpa/User.java
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -294,7 +304,9 @@ public class User {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/jpa/UserCommandLineRunner.java
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -335,7 +347,9 @@ public class UserCommandLineRunner implements CommandLineRunner {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/jpa/UserRepository.java
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -347,7 +361,9 @@ public interface UserRepository extends CrudRepository<User, Long> {
   List<User> findByRole(String role);
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/jpa/UserRestRepository.java
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -363,7 +379,9 @@ public interface UserRestRepository extends
   List<User> findByRole(@Param("role") String role);
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/model/Question.java
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -447,7 +465,9 @@ public class Question {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/model/Survey.java
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -508,7 +528,9 @@ public class Survey {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/security/SecurityConfig.java
+
 ```
 package com.in28minutes.springboot.security;
 
@@ -538,7 +560,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/service/SurveyService.java
+
 ```
 package com.in28minutes.springboot.service;
 
@@ -636,7 +660,9 @@ public class SurveyService {
   }
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/WelcomeController.java
+
 ```
 package com.in28minutes.springboot;
 
@@ -676,7 +702,9 @@ public class WelcomeController {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/springboot/WelcomeService.java
+
 ```
 package com.in28minutes.springboot;
 
@@ -696,15 +724,21 @@ public class WelcomeService {
   }
 }
 ```
+
 ### src/main/resources/application-dev.properties
+
 ```
 logging.level.org.springframework: TRACE
 ```
+
 ### src/main/resources/application-prod.properties
+
 ```
 logging.level.org.springframework: INFO
 ```
+
 ### src/main/resources/application.properties
+
 ```
 logging.level.org.springframework: DEBUG
 app.name=in28Minutes
@@ -714,7 +748,9 @@ basic.value=true
 basic.message=Welcome to in28minutes
 basic.number=200
 ```
+
 ### src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -830,7 +866,9 @@ public class SurveyControllerIT {
 
 }
 ```
+
 ### src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java
+
 ```
 package com.in28minutes.springboot.controller;
 

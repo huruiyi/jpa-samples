@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-	@Autowired
-	private BusinessService businessService;
-	
-	//"/sum" => 100
-	@GetMapping("/sum")
-	public long displaySum() {
-		return businessService.calculateSum();
-	}
+    @Autowired
+    private BusinessService businessService;
+
+    //"/sum" => 100
+    @GetMapping("/sum")
+    public long displaySum() {
+        return businessService.calculateSum();
+    }
 
 }
