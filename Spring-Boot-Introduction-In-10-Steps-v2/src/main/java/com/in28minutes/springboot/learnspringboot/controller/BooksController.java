@@ -8,6 +8,10 @@ import java.util.List;
 
 @RestController
 public class BooksController {
+
+    /**
+     * http://localhost:8080/books
+     */
     @GetMapping("/books")
     public List<Book> getAllBooks() {
         return List.of(new Book(1L, "Mastering Spring 5.2", "Ranga Karanam"));

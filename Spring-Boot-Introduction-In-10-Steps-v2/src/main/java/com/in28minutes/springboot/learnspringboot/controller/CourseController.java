@@ -10,6 +10,9 @@ import java.util.List;
 @RestController
 public class CourseController {
 
+    /**
+     * http://localhost:8080/courses
+     */
     @RequestMapping("/courses")
     public List<Course> retrieveAllCourses() {
         return Arrays.asList(

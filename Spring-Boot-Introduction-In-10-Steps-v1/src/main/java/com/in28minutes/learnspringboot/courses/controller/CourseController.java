@@ -20,7 +20,7 @@ public class CourseController {
         return repository.findAll();
     }
 
-    //// http://localhost:8080/courses/1
+    //// http://localhost:8080/courses/100001
     @GetMapping("/courses/{id}")
     public Course getCourseDetails(@PathVariable long id) {
 
