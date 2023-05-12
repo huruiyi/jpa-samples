@@ -23,7 +23,7 @@ public class DemoApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... arg0) throws Exception {
+    public void run(String... arg0) {
         Course course = repository.findById(10001L);
         logger.info("Course 10001 -> {}", course);
         repository.save(new Course("Microservices in 100 Steps"));
