@@ -1,12 +1,8 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.util.Optional;
-
+import com.in28minutes.jpa.hibernate.demo.DemoApplication;
+import com.in28minutes.jpa.hibernate.demo.entity.Course;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +11,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import java.util.Optional;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest(classes = DemoApplication.class)
 public class CourseSpringDataRepositoryTest {
@@ -54,7 +50,7 @@ public class CourseSpringDataRepositoryTest {
 
     @Test
     public void sort() {
-        Sort sort = new Sort(Sort.Direction.ASC, "name");
+        Sort sort = Sort.by(Sort.Direction.ASC, "name");
         logger.info("Sorted Courses -> {} ", repository.findAll(sort));
         //Courses -> [Course[JPA in 50 Steps], Course[Spring in 50 Steps], Course[Spring Boot in 100 Steps]]
     }
