@@ -1,28 +1,18 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.JoinType;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.in28minutes.jpa.hibernate.demo.DemoApplication;
+import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.*;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import java.util.List;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
 public class CriteriaQueryTest {
 

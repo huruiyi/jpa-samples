@@ -1,11 +1,11 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ import com.in28minutes.jpa.hibernate.demo.DemoApplication;
 import com.in28minutes.jpa.hibernate.demo.entity.Course;
 import com.in28minutes.jpa.hibernate.demo.entity.Review;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest(classes = DemoApplication.class)
 public class CourseRepositoryTest {
 

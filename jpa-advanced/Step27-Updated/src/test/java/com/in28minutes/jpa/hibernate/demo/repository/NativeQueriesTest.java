@@ -1,24 +1,18 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.in28minutes.jpa.hibernate.demo.DemoApplication;
+import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import java.util.List;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
 public class NativeQueriesTest {
 
@@ -32,7 +26,6 @@ public class NativeQueriesTest {
         Query query = em.createNativeQuery("SELECT * FROM COURSE", Course.class);
         List resultList = query.getResultList();
         logger.info("SELECT * FROM COURSE  -> {}", resultList);
-        //SELECT * FROM COURSE  -> [Course[Web Services in 100 Steps], Course[JPA in 50 Steps - Updated], Course[Spring in 50 Steps], Course[Spring Boot in 100 Steps]]
     }
 
     @Test
@@ -41,7 +34,6 @@ public class NativeQueriesTest {
         query.setParameter(1, 10001L);
         List resultList = query.getResultList();
         logger.info("SELECT * FROM COURSE  where id = ? -> {}", resultList);
-        //[Course[JPA in 50 Steps - Updated]]
     }
 
     @Test
@@ -50,7 +42,6 @@ public class NativeQueriesTest {
         query.setParameter("id", 10001L);
         List resultList = query.getResultList();
         logger.info("SELECT * FROM COURSE  where id = :id -> {}", resultList);
-        //[Course[JPA in 50 Steps - Updated]]
     }
 
     @Test
@@ -59,7 +50,6 @@ public class NativeQueriesTest {
         Query query = em.createNativeQuery("Update COURSE set last_updated_date=sysdate()");
         int noOfRowsUpdated = query.executeUpdate();
         logger.info("noOfRowsUpdated  -> {}", noOfRowsUpdated);
-        //SELECT * FROM COURSE  -> [Course[Web Services in 100 Steps], Course[JPA in 50 Steps - Updated], Course[Spring in 50 Steps], Course[Spring Boot in 100 Steps]]
     }
 
 

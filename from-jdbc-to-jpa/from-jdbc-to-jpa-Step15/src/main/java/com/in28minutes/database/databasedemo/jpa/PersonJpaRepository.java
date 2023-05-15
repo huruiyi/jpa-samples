@@ -3,8 +3,8 @@ package com.in28minutes.database.databasedemo.jpa;
 import com.in28minutes.database.databasedemo.entity.Person;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository

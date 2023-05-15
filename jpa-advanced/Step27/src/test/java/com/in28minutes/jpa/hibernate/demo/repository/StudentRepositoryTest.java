@@ -1,9 +1,8 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import javax.persistence.EntityManager;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import jakarta.persistence.EntityManager;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.in28minutes.jpa.hibernate.demo.DemoApplication;
 import com.in28minutes.jpa.hibernate.demo.entity.Student;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
 public class StudentRepositoryTest {
 

@@ -56,10 +56,10 @@ public class MyMath {
 ```java
 package com.in28minutes.junit;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AssertTest {
 
@@ -81,13 +81,13 @@ public class AssertTest {
 ```java
 package com.in28minutes.junit;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MyMathTest {
 	MyMath myMath = new MyMath();

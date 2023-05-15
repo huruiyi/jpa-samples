@@ -2,7 +2,7 @@ package com.in28minutes.jpa.hibernate.demo.entity;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Entity;
+import jakarta.persistence.Entity;
 
 @Entity
 public class PartTimeEmployee extends Employee {

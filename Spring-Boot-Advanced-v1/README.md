@@ -261,10 +261,10 @@ class SurveyController {
 ```
 package com.in28minutes.springboot.jpa;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class User {
@@ -761,7 +761,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.boot.context.embedded.LocalServerPort;
@@ -779,7 +779,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.in28minutes.springboot.Application;
 import com.in28minutes.springboot.model.Question;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest(classes = Application.class,
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SurveyControllerIT {
@@ -872,11 +872,11 @@ public class SurveyControllerIT {
 ```
 package com.in28minutes.springboot.controller;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -896,7 +896,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.in28minutes.springboot.model.Question;
 import com.in28minutes.springboot.service.SurveyService;
 
-@RunWith(SpringRunner.class)
+
 @WebMvcTest(value = SurveyController.class, secure = false)
 public class SurveyControllerTest {
 

@@ -43,14 +43,14 @@ Magic of Spring Boot and in Memory Database
 Spring Boot chooses a default value for you based on whether it thinks your database is embedded (default create-drop) or not (default none). 
 
 HibernateJpaAutoConfiguration matched:
- - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'javax.persistence.EntityManager'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
+ - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'jakarta.persistence.EntityManager'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
  - HibernateEntityManager found class 'org.hibernate.ejb.HibernateEntityManager' (HibernateJpaAutoConfiguration.HibernateEntityManagerCondition)
 
 DataSourceAutoConfiguration matched:
  - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType'; @ConditionalOnMissingClass did not find unwanted class (OnClassCondition)
 
 JpaBaseConfiguration#entityManagerFactory matched:
- - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,javax.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+ - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
 JpaBaseConfiguration#transactionManager matched:
  - @ConditionalOnMissingBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
@@ -170,9 +170,9 @@ JpaBaseConfiguration#transactionManager matched:
 ```java
 package com.in28minutes.learning.jpa.jpain10steps.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 //Table - User
 @Entity
@@ -241,8 +241,8 @@ public class JpaIn10StepsApplication {
 ```java
 package com.in28minutes.learning.jpa.jpain10steps.service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
@@ -382,12 +382,12 @@ logging.level.org.springframework=debug
 ```java
 package com.in28minutes.learning.jpa.jpain10steps;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest
 public class JpaIn10StepsApplicationTests {
 

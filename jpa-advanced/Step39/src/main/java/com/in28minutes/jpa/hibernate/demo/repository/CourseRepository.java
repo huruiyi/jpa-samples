@@ -1,17 +1,15 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-
+import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import com.in28minutes.jpa.hibernate.demo.entity.Review;
+import jakarta.persistence.EntityManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
+import java.util.List;
 
 @Repository
 @Transactional

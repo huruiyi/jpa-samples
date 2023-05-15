@@ -2,11 +2,11 @@ package com.in28minutes.jpa.hibernate.demo.repository;
 
 import java.util.List;
 
-import javax.persistence.EntityGraph;
-import javax.persistence.EntityManager;
-import javax.persistence.Subgraph;
+import jakarta.persistence.EntityGraph;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Subgraph;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.in28minutes.jpa.hibernate.demo.DemoApplication;
 import com.in28minutes.jpa.hibernate.demo.entity.Course;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest(classes = DemoApplication.class)
 public class PerformanceTuningTest {
 
@@ -47,7 +47,7 @@ public class PerformanceTuningTest {
 
         List<Course> courses = em
                 .createNamedQuery("query_get_all_courses", Course.class)
-                .setHint("javax.persistence.loadgraph", entityGraph)
+                .setHint("jakarta.persistence.loadgraph", entityGraph)
                 .getResultList();
 
         for (Course course : courses) {

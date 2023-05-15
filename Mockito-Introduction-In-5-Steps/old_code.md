@@ -199,13 +199,13 @@ public class SomeBusinessImpl {
 ```java
 package com.in28minutes.mockito.mockitodemo;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 public class ListTest {
@@ -252,12 +252,12 @@ public class ListTest {
 ```java
 package com.in28minutes.mockito.mockitodemo;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest
 public class MockitoDemoApplicationTests {
 
@@ -275,10 +275,10 @@ public class MockitoDemoApplicationTests {
 ```java
 package com.in28minutes.mockito.mockitodemo;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -320,11 +320,11 @@ public class SomeBusinessMockAnnotationsTest {
 ```java
 package com.in28minutes.mockito.mockitodemo;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SomeBusinessMockTest {
 
@@ -356,9 +356,9 @@ public class SomeBusinessMockTest {
 ```java
 package com.in28minutes.mockito.mockitodemo;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SomeBusinessStubTest {
 	@Test

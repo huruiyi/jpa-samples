@@ -1,15 +1,15 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.List;
 
-import javax.persistence.EntityGraph;
-import javax.persistence.EntityManager;
-import javax.persistence.Subgraph;
+import jakarta.persistence.EntityGraph;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Subgraph;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,7 @@ import com.in28minutes.jpa.hibernate.demo.entity.Course;
 import com.in28minutes.jpa.hibernate.demo.entity.Review;
 import com.in28minutes.jpa.hibernate.demo.entity.Student;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest(classes = DemoApplication.class)
 public class CourseRepositoryTest {
 
@@ -114,7 +114,7 @@ public class CourseRepositoryTest {
         Subgraph<List<Student>> bookSubGraph = graph.addSubgraph("students");
 
         List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-                .setHint("javax.persistence.loadgraph", graph)
+                .setHint("jakarta.persistence.loadgraph", graph)
                 .getResultList();
         for (Course course : courses) {
             System.out.println(course + " " + course.getStudents());
@@ -126,7 +126,7 @@ public class CourseRepositoryTest {
     @DirtiesContext
     public void performance_without_hint() {
         List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-                //.setHint("javax.persistence.loadgraph", graph)
+                //.setHint("jakarta.persistence.loadgraph", graph)
                 .getResultList();
         for (Course course : courses) {
             System.out.println(course + " " + course.getStudents());

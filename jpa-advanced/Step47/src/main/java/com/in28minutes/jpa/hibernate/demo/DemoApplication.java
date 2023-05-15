@@ -50,8 +50,8 @@ public class DemoApplication implements CommandLineRunner {
 
         // Jack FullTimeEmployee salary - 10000$
         // Jill PartTimeEmployee - 50$ per hour
-        employeeRepository.insert(new PartTimeEmployee("Jill", new BigDecimal("50")));
-        employeeRepository.insert(new FullTimeEmployee("Jack", new BigDecimal("10000")));
+        // employeeRepository.insert(new PartTimeEmployee("Jill", new BigDecimal("50")));
+        // employeeRepository.insert(new FullTimeEmployee("Jack", new BigDecimal("10000")));
 
         logger.info("All Employees -> {}", employeeRepository.retrieveAllEmployees());
     }

@@ -1,30 +1,25 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import java.util.List;
-
-import javax.persistence.EntityGraph;
-import javax.persistence.EntityManager;
-import javax.persistence.Subgraph;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.in28minutes.jpa.hibernate.demo.DemoApplication;
+import com.in28minutes.jpa.hibernate.demo.entity.Course;
+import com.in28minutes.jpa.hibernate.demo.entity.Review;
+import com.in28minutes.jpa.hibernate.demo.entity.Student;
+import jakarta.persistence.EntityGraph;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Subgraph;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
+import java.util.List;
 
-@RunWith(SpringRunner.class)
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 @SpringBootTest(classes = DemoApplication.class)
 public class CourseRepositoryTest {
 
@@ -99,7 +94,7 @@ public class CourseRepositoryTest {
         Subgraph<List<Student>> bookSubGraph = graph.addSubgraph("students");
 
         List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-                .setHint("javax.persistence.loadgraph", graph)
+                .setHint("jakarta.persistence.loadgraph", graph)
                 .getResultList();
         for (Course course : courses) {
             System.out.println(course + " " + course.getStudents());
@@ -111,7 +106,7 @@ public class CourseRepositoryTest {
     @DirtiesContext
     public void performance_without_hint() {
         List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-                //.setHint("javax.persistence.loadgraph", graph)
+                //.setHint("jakarta.persistence.loadgraph", graph)
                 .getResultList();
         for (Course course : courses) {
             System.out.println(course + " " + course.getStudents());
