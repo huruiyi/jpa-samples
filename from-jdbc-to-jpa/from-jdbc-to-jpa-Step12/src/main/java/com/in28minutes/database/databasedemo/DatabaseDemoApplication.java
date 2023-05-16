@@ -30,14 +30,11 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 
         logger.info("User id 10001 -> {}", dao.findById(10001));
 
-        logger.info("Deleting 10002 -> No of Rows Deleted - {}",
-                dao.deleteById(10002));
+        logger.info("Deleting 10002 -> No of Rows Deleted - {}", dao.deleteById(10002));
 
-        logger.info("Inserting 10004 -> {}",
-                dao.insert(new Person(10004, "Tara", "Berlin", new Date())));
+        logger.info("Inserting 10004 -> {}", dao.insert(new Person(10004, "Tara", "Berlin", new Date())));
 
-        logger.info("Update 10003 -> {}",
-                dao.update(new Person(10003, "Pieter", "Utrecht", new Date())));
+        logger.info("Update 10003 -> {}", dao.update(new Person(10003, "Pieter", "Utrecht", new Date())));
 
     }
 }

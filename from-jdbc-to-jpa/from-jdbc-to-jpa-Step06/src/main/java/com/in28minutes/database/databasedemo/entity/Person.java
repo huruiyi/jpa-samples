@@ -1,8 +1,14 @@
 package com.in28minutes.database.databasedemo.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
+@Entity
 public class Person {
+
+    @Id
     private int id;
     private String name;
     private String location;
@@ -54,7 +60,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("\nPerson [id=%s, name=%s, location=%s, birthDate=%s]", id, name, location, birthDate);
+        return String.format("\nPerson [id=%s, name=%s, location=%s, birthDate=%s]\n", id, name, location, birthDate);
     }
 
 

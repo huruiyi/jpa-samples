@@ -5,17 +5,16 @@ import org.springframework.stereotype.Repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
 @Repository
 @Transactional
 public class PersonJpaRepository {
 
-    //connect to the database
     @PersistenceContext
     EntityManager entityManager;
 
     public Person findById(int id) {
-        return entityManager.find(Person.class, id);//JPA
+        return entityManager.find(Person.class, id);
     }
 }

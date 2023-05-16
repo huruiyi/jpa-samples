@@ -1,8 +1,15 @@
 package com.in28minutes.database.databasedemo.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
+
+@Entity
 public class Person {
+
+    @Id
     private int id;
     private String name;
     private String location;
