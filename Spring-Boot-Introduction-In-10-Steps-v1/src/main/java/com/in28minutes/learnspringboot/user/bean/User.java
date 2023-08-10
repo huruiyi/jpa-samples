@@ -1,11 +1,8 @@
-package com.in28minutes.learning.jpa.jpain10steps.entity;
-
+package com.in28minutes.learnspringboot.user.bean;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-
-//Table - User
 @Entity
 public class User {
 

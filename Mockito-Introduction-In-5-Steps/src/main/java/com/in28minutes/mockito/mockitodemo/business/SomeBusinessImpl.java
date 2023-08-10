@@ -21,8 +21,3 @@ public class SomeBusinessImpl {
 
 }
 
-interface DataService {
-    int[] retrieveAllData();
-
-
-}

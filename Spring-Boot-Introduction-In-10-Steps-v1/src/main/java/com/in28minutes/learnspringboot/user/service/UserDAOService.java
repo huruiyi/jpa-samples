@@ -1,7 +1,7 @@
-package com.in28minutes.learning.jpa.jpain10steps.service;
+package com.in28minutes.learnspringboot.user.service;
 
 
-import com.in28minutes.learning.jpa.jpain10steps.entity.User;
+import com.in28minutes.learnspringboot.user.bean.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
