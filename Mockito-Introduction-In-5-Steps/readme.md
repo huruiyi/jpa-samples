@@ -215,6 +215,8 @@ package com.in28minutes.mockito.mockitodemo.business;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+import com.example.business.DataService;
+import com.example.business.SomeBusinessImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -223,30 +225,30 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class SomeBusinessImplMockTest {
-	
-	@Mock
-	private DataService dataServiceMock;
-	
-	@InjectMocks
-	private SomeBusinessImpl businessImpl;
 
-	@Test
-	void findTheGreatestFromAllData_basicScenario() {
-		when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{25, 15, 5});
-		assertEquals(25, businessImpl.findTheGreatestFromAllData());
-	}
-	
-	@Test
-	void findTheGreatestFromAllData_OneValue() {
-		when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{35});
-		assertEquals(35, businessImpl.findTheGreatestFromAllData());
-	}
+  @Mock
+  private DataService dataServiceMock;
 
-	@Test
-	void findTheGreatestFromAllData_EmptyArray() {
-		when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{});
-		assertEquals(Integer.MIN_VALUE, businessImpl.findTheGreatestFromAllData());
-	}
+  @InjectMocks
+  private SomeBusinessImpl businessImpl;
+
+  @Test
+  void findTheGreatestFromAllData_basicScenario() {
+    when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{25, 15, 5});
+    assertEquals(25, businessImpl.findTheGreatestFromAllData());
+  }
+
+  @Test
+  void findTheGreatestFromAllData_OneValue() {
+    when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{35});
+    assertEquals(35, businessImpl.findTheGreatestFromAllData());
+  }
+
+  @Test
+  void findTheGreatestFromAllData_EmptyArray() {
+    when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{});
+    assertEquals(Integer.MIN_VALUE, businessImpl.findTheGreatestFromAllData());
+  }
 
 }
 ```
@@ -260,45 +262,47 @@ package com.in28minutes.mockito.mockitodemo.business;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.example.business.DataService;
+import com.example.business.SomeBusinessImpl;
 import org.junit.jupiter.api.Test;
 
 class SomeBusinessImplStubTest {
 
-	@Test
-	void findTheGreatestFromAllData_basicScenario() {
-		DataService dataServiceStub = new DataServiceStub1();
-		SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceStub);
-		int result = businessImpl.findTheGreatestFromAllData();
-		assertEquals(25, result);
-	}
+  @Test
+  void findTheGreatestFromAllData_basicScenario() {
+    DataService dataServiceStub = new DataServiceStub1();
+    SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceStub);
+    int result = businessImpl.findTheGreatestFromAllData();
+    assertEquals(25, result);
+  }
 
-	@Test
-	void findTheGreatestFromAllData_withOneValue() {
-		DataService dataServiceStub = new DataServiceStub2();
-		SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceStub);
-		int result = businessImpl.findTheGreatestFromAllData();
-		assertEquals(35, result);
-	}
+  @Test
+  void findTheGreatestFromAllData_withOneValue() {
+    DataService dataServiceStub = new DataServiceStub2();
+    SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceStub);
+    int result = businessImpl.findTheGreatestFromAllData();
+    assertEquals(35, result);
+  }
 
 }
 
 class DataServiceStub1 implements DataService {
 
-	@Override
-	public int[] retrieveAllData() {
-		return new int[]{25, 15, 5};
-	}
-	
+  @Override
+  public int[] retrieveAllData() {
+    return new int[]{25, 15, 5};
+  }
+
 }
 
 
 class DataServiceStub2 implements DataService {
 
-	@Override
-	public int[] retrieveAllData() {
-		return new int[]{35};
-	}
-	
+  @Override
+  public int[] retrieveAllData() {
+    return new int[]{35};
+  }
+
 }
 ```
 
